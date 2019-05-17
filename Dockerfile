@@ -16,7 +16,7 @@ RUN echo 'deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted
 RUN apt-get -y update \
     && apt-get install -y software-properties-common python-software-properties vim supervisor apache2 \
     && LC_ALL=C.UTF-8 add-apt-repository -y -u ppa:ondrej/php \
-    && apt-get -y install php5.6 libapache2-mod-php5.6 php5.6-mysql php5.6-mcrypt php5.6-mbstring php5.6-gd \
+    && apt-get -y install php5.6 libapache2-mod-php5.6 php5.6-mysql php5.6-mcrypt php5.6-mbstring php5.6-gd php5.6-curl php5.6-memcache \
     && ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
